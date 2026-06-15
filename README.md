@@ -3,7 +3,7 @@
 A lightweight, browser-based API testing tool built for **Devlynix Buildathon 2.0**.
 
 ## 🚀 Live Demo
-[Coming Soon]
+https://api-playground-v1.vercel.app/
 
 ## ✨ Features
 - Send GET, POST, PUT, DELETE, PATCH requests
@@ -19,8 +19,26 @@ A lightweight, browser-based API testing tool built for **Devlynix Buildathon 2.
 - Zustand
 - React Syntax Highlighter
 
-## 🏃 Run Locally
+## 🧪 Quick Testing Guide
+To verify the multi-header and dynamic payload parsing capabilities of this playground, you can test using the following mock endpoint:
 
+- **Method:** `GET`
+- **URL:** `https://jsonplaceholder.typicode.com/users`
+
+- **Method:** `POST`
+- **URL:** `https://jsonplaceholder.typicode.com/posts`
+- **Headers:** 
+  - `Content-Type`: `application/json`
+  - `Authorization`: `Bearer devlynix_token_2026`
+- **Body:**
+```json
+  {
+    "title": "Devlynix Multi-Header Test",
+    "body": "Testing multiple headers simultaneously.",
+    "userId": 1
+  }
+
+## 🏃 Run Locally
 Clone the project:
 \```bash
 git clone https://github.com/Naradhrishi/devlynix-api-playground.git
