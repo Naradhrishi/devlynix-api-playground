@@ -9,6 +9,7 @@ const METHOD_COLORS = {
   PUT: "text-[#eab308]",
   PATCH: "text-[#f97316]",
   DELETE: "text-[#ef4444]",
+
 };
 
 const RequestBar = ({ onSend }) => {
@@ -17,6 +18,7 @@ const RequestBar = ({ onSend }) => {
   return (
     <div className="w-full bg-[#1a1a1a] border-b border-[#2d2d2d] px-4 py-3">
       <div className="flex items-center gap-3">
+        
         {/* Method */}
         <select
           value={method}

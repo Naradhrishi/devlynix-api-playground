@@ -87,7 +87,7 @@ function App() {
 
   return (
     <div className="h-screen w-screen flex flex-col overflow-hidden bg-[#1a1a1a]">
-      {/* Navbar */}
+      {/* Hero and Navbar */}
       <HeroNavbar />
 
       {/* Request Bar */}
