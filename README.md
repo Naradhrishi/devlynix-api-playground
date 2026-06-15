@@ -10,9 +10,7 @@ A lightweight, browser-based API testing tool built for **Devlynix Buildathon 2.
 - Set custom headers and request body
 - View formatted JSON responses with syntax highlighting
 - Request history saved locally
-- Generate equivalent Fetch/Axios/cURL code snippets
-- Environment variables support
-- Export/Import collections
+- Reload request URL and body from history panel
 
 ## 🧰 Tech Stack
 - React.js + Vite
