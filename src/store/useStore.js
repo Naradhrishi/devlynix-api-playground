@@ -1,20 +1,14 @@
 import { create } from "zustand";
 
 const useStore = create((set) => ({
-  // Request state
   method: "GET",
   url: "",
   headers: [{ key: "Content-Type", value: "application/json", enabled: true }],
   body: "",
-
-  // Response state
   response: null,
   loading: false,
-
-  // History
   history: JSON.parse(localStorage.getItem("api-history") || "[]"),
 
-  // Actions
   setMethod: (method) => set({ method }),
   setUrl: (url) => set({ url }),
   setHeaders: (headers) => set({ headers }),

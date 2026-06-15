@@ -1,4 +1,4 @@
-import logo from "../assets/logo.png";
+// import logo from "../assets/logo.png";
 import { FiZap } from "react-icons/fi";
 import useStore from "../store/useStore";
 
@@ -9,7 +9,7 @@ const HeroNavbar = () => {
     <nav className="flex items-center justify-between px-6 py-3 bg-[#1a1a1a] border-b border-[#2d2d2d] shrink-0">
       {/* Left */}
       <div className="flex items-center gap-3">
-        <img src={logo} alt="logo" className="h-8 w-auto" />
+        {/* <img src={logo} alt="logo" className="h-8 w-auto" /> */}
         <span className="text-[#e5e5e5] font-bold text-xl">
           API <span className="text-[#22c55e]">Playground</span>
         </span>

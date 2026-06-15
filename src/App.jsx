@@ -8,9 +8,15 @@ import useStore from "./store/useStore";
 
 function App() {
   const {
-    method, url, headers, body,
-    setResponse, setLoading,
-    addToHistory, response, loading,
+    method,
+    url,
+    headers,
+    body,
+    setResponse,
+    setLoading,
+    addToHistory,
+    response,
+    loading,
   } = useStore();
 
   const handleSend = async () => {
@@ -30,7 +36,10 @@ function App() {
         method,
         url,
         headers: headersObj,
-        data: method !== "GET" && method !== "DELETE" ? JSON.parse(body || "{}") : undefined,
+        data:
+          method !== "GET" && method !== "DELETE"
+            ? JSON.parse(body || "{}")
+            : undefined,
       });
 
       const result = {
@@ -44,7 +53,14 @@ function App() {
       };
 
       setResponse(result);
-      addToHistory({ method, url, status: res.status, time: result.time });
+      addToHistory({
+        method,
+        url,
+        status: res.status,
+        time: result.time,
+        headers: headers,
+        body: body,
+      });
     } catch (err) {
       const result = {
         status: err.response?.status || "ERR",
@@ -56,7 +72,14 @@ function App() {
         success: false,
       };
       setResponse(result);
-      addToHistory({ method, url, status: result.status, time: result.time });
+      addToHistory({
+        method,
+        url,
+        status: result.status,
+        time: result.time,
+        headers: headers,
+        body: body,
+      });
     }
 
     setLoading(false);
